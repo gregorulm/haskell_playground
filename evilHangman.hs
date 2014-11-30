@@ -54,7 +54,7 @@ newGuess cs = do
     let c' = [toLower c]    
     return $ c' `union` cs
 
--- gthe ame is won if the pattern contains no missing letters   
+-- the game is won if the pattern contains no missing letters   
 isSolved :: Pattern -> Bool
 isSolved = not . elem '_'
 
@@ -79,7 +79,7 @@ updatePattern ((w, p, c):ws) = p
 largestCount :: Words -> Int
 largestCount = maximum . map (\(_, _, count) -> count)
 
--- removes all words that don't have the maximum of unknown letters
+-- removes all words that don't contain the maximum of unknown letters
 newList :: Int -> Words -> Words
 newList maxCount = filter (\(_, _, count) -> count == maxCount)
     
