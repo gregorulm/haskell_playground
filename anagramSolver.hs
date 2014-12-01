@@ -1,12 +1,10 @@
 {-
-
 Gregor Ulm
 
 Anagram Solver:
 Enter a word to receive a list of anagrams found in a dictionary.
 
 Sample run:
-
 Enter a word:
 creative
 ["reactive"]
@@ -45,3 +43,4 @@ main = do
     let pairs  = preprocessDict allWords
         result = (getAnagrams (sort phrase) pairs) \\ [phrase]
     print result
+    
